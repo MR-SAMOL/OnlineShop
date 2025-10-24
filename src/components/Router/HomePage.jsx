@@ -98,15 +98,9 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/40"></div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 md:px-12 space-y-4 animate-slideUp">
-          {/* <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg">
-            Welcome to <span className="text-sky-400">FitNest</span>
-          </h1>
-          <p className="text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg max-w-xl mx-auto leading-relaxed">
-            Discover premium styles for Men, Women, and Couples — all in one
-            place.
-          </p> */}
-
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-4">
+        </div>
+      </section>
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-4">
             <button
               onClick={() => goTo("/men")}
               className="bg-sky-500 hover:bg-blue-600 text-white px-4 sm:px-6 md:px-8 py-2 rounded-full text-xs sm:text-sm md:text-base font-semibold shadow-md hover:shadow-lg transition-all duration-300"
@@ -126,11 +120,10 @@ export default function HomePage() {
               Couples
             </button>
           </div>
-        </div>
-      </section>
 
       {/* 🛍 Featured Products */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+        
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 text-center">
           Featured Products
         </h2>
