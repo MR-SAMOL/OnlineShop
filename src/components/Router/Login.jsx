@@ -50,7 +50,7 @@ export default function Login() {
         className="bg-white/10 backdrop-blur-xl border border-white/20 text-white shadow-2xl rounded-3xl p-6 sm:p-8 w-full max-w-md"
       >
         <h2 className="text-2xl sm:text-3xl font-bold text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-6">
-          Log In to FitNest
+          KH SHOP
         </h2>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -64,7 +64,7 @@ export default function Login() {
             </label>
             <input
               type="email"
-              placeholder="fitnest@gmail.com"
+              placeholder="khshop@gmail.com"
               className="w-full px-4 py-3 rounded-xl bg-gray-700 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
               required
             />

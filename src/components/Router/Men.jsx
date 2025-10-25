@@ -116,7 +116,7 @@ export default function Men() {
       <footer className="bg-[#12141b] text-gray-300 py-10 mt-20">
         <div className="max-w-7xl mx-auto px-6 grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           <div>
-            <h3 className="text-xl font-semibold text-white mb-3">FitNest</h3>
+            <h3 className="text-xl font-semibold text-white mb-3">KH SHOP</h3>
             <p className="text-sm text-gray-400">
               Step into the nest of fashion — where your perfect fit lives.
               Designed for Men, Women, and Couples with love and creativity.
@@ -143,7 +143,7 @@ export default function Men() {
         </div>
 
         <div className="text-center mt-10 border-t border-gray-700 pt-4 text-gray-500 text-sm">
-          © {new Date().getFullYear()} <span className="text-white font-semibold">FitNest</span> All rights reserved.
+          © {new Date().getFullYear()} <span className="text-white font-semibold">KH SHOP</span> All rights reserved.
         </div>
       </footer>
 

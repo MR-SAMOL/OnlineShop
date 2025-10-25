@@ -16,6 +16,7 @@ import Checkout from './Checkout'
 import Thank from './Thank'
 import AddCart from './AddCart'
 import ContactUs from './ContactUs'
+import DarkMod from './DarkMod'
 const Contect = () => {
   return (
     <div>
@@ -38,6 +39,7 @@ const Contect = () => {
            <Route path='/cheak' element={<Checkout />}/>
            <Route path='/thank' element={<Thank />}/>
            <Route path='/contactus' element={<ContactUs />}/>
+           <Route path='/dark' element={<DarkMod />}/>
         </Routes>
     </div>
   )

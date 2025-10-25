@@ -162,42 +162,52 @@ export default function HomePage() {
       </section>
 
       {/* 🧥 Categories Section */}
-      <section className="  py-16 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 text-center">
-          Shop by Category
-        </h2>
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-          {categories.map((cat, index) => (
-            <div
-              key={index}
-              className="relative rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-1 hover:shadow-2xl transition-all duration-300"
+<section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 text-center">
+    <h2 className="  text-3xl sm:text-4xl md:text-5xl font-extrabold mb-14 text-gray-800 tracking-tight">
+      Shop by <span className="text-sky-500 font">Category</span>
+    </h2>
+
+    {/* Centered Grid */}
+    <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 justify-center">
+      {categories.map((cat, index) => (
+        <div
+          key={index}
+          className="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 mx-auto"
+        >
+          <img
+            src={cat.image}
+            alt={cat.title}
+            className="w-64 sm:w-72 md:w-80 h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500"></div>
+
+          {/* Text & Button */}
+          <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+            <h3 className="text-2xl font-bold mb-3 drop-shadow-lg">{cat.title}</h3>
+            <button
+              onClick={cat.action}
+              className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg hover:scale-105 transition-all duration-300"
             >
-              <img
-                src={cat.image}
-                alt={cat.title}
-                className="w-full h-60 sm:h-72 md:h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
-                  {cat.title}
-                </h3>
-                <button
-                  onClick={cat.action}
-                  className="bg-sky-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full text-sm sm:text-base font-semibold transition-all duration-300"
-                >
-                  Shop Now
-                </button>
-              </div>
-            </div>
-          ))}
+              Shop Now
+            </button>
+          </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
 
       {/* ⚙️ Footer */}
       <footer className="bg-gray-900 text-gray-300 py-12 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           <div>
-            <h3 className="text-xl font-semibold text-white mb-3">FitNest</h3>
+            <h3 className="text-xl font-semibold text-white mb-3">KH SHOP</h3>
             <p className="text-sm text-gray-400">
               Step into the nest of fashion — designed for Men, Women, and
               Couples with love and creativity.
@@ -211,7 +221,6 @@ export default function HomePage() {
               <li><button onClick={() => goTo("/men")} className="hover:text-pink-500 hover:underline">Men</button></li>
               <li><button onClick={() => goTo("/women")} className="hover:text-pink-500 hover:underline">Women</button></li>
               <li><button onClick={() => goTo("/couple")} className="hover:text-pink-500 hover:underline">Couple</button></li>
-              <li><button onClick={() => goTo("/fitnest")} className="hover:text-pink-500 hover:underline">FitNest</button></li>
             </ul>
           </div>
           <div>
@@ -225,7 +234,7 @@ export default function HomePage() {
         </div>
         <div className="text-center mt-10 border-t border-gray-700 pt-4 text-gray-500 text-sm">
           © {new Date().getFullYear()}{" "}
-          <span className="text-white font-semibold">FitNest</span> All rights reserved.
+          <span className="text-white font-semibold">KH SHOP</span> All rights reserved.
         </div>
       </footer>
 

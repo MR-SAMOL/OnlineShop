@@ -18,12 +18,8 @@ export default function Navbar() {
     { path: "/about", label: "About" },
   ];
 
-  // const handleSearch = () => {
-  //   if (searchQuery.trim()) {
-  //     alert(`Searching for: ${searchQuery}`);
-  //     setSearchQuery("");
-  //   }
-  // };
+  
+ 
 
   // ✅ Load and update cart count from localStorage
   useEffect(() => {
@@ -53,8 +49,8 @@ export default function Navbar() {
           className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
         /> */}
         <span className="text-2xl sm:text-3xl font-bold">
-          <span className="text-white">Fit</span>
-          <span className="text-sky-400 ml-1">Nest</span>
+          <span className="text-white">KH</span>
+          <span className="text-sky-400 ml-1">SHOP</span>
         </span>
       </NavLink>
 
@@ -118,22 +114,7 @@ export default function Navbar() {
             </NavLink>
           ))}
 
-          {/* 🔍 Mobile Search */}
-          {/* <dv className="flex items-center justify-center gap-2 px-4 py-3">
-            <input
-              type="text"
-              placeholder="Search..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="bg-gray-800 text-white rounded-lg px-2 py-1 w-40 focus:outline-none placeholder-gray-400"
-            />
-            <button
-              onClick={handleSearch}
-              className="text-sky-400 hover:text-sky-300 transition-colors"
-            >
-              <Search size={20} />
-            </button>
-          </dv> */}
+          
         </div>
       )}
     </nav>
