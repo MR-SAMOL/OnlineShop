@@ -43,14 +43,10 @@ export default function Navbar() {
     <nav className="w-full bg-[#1e1f26] text-white shadow-md px-6 sm:px-8 py-3 flex justify-between items-center sticky top-0 z-50">
       {/* Logo */}
       <NavLink to="/" className="flex items-center gap-2">
-        {/* <img
-          src="/src/assets/fs.png"
-          alt="FitNest Logo"
-          className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
-        /> */}
+       
         <span className="text-2xl sm:text-3xl font-bold">
-          <span className="text-white">KH</span>
-          <span className="text-sky-400 ml-1">SHOP</span>
+          <span className="text-white">Online</span>
+          <span className="text-sky-400 ml-1">Shop</span>
         </span>
       </NavLink>
 
