@@ -119,7 +119,7 @@ export default function Women() {
             <span className="text-pink-400">{search}</span>"
           </p>
         )}
-      </div>
+      </div> 
 
       {/* Footer */}
       <footer className="bg-[#12141b] text-gray-300 py-10 mt-20">

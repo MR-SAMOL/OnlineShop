@@ -17,7 +17,7 @@ const Search = () => {
       <div className="bg-white shadow-xl rounded-3xl p-6 w-full max-w-md md:max-w-lg lg:max-w-xl">
         <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
           Search Products
-        </h2>
+        </h2> 
 
         <form
           onSubmit={handleSearch}
