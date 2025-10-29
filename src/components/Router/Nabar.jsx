@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { ShoppingCart, User, Search } from "lucide-react";
+import DarkMode from "./DarkMod"; // Correct path to your DarkMode component
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ export default function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false);
   // const [searchQuery, setSearchQuery] = useState("");
-  const [cartCount, setCartCount] = useState(0); // ✅ add state
+  const [cartCount, setCartCount] = useState(0);
 
   const links = [
     { path: "/women", label: "Women" },
@@ -18,10 +19,7 @@ export default function Navbar() {
     { path: "/about", label: "About" },
   ];
 
-  
- 
-
-  // ✅ Load and update cart count from localStorage
+  // Load and update cart count from localStorage
   useEffect(() => {
     const loadCartCount = () => {
       const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -35,17 +33,21 @@ export default function Navbar() {
 
     return () => {
       window.removeEventListener("storage", loadCartCount);
-
     };
   }, []);
 
   return (
-    <nav className="w-full bg-[#1e1f26] text-white shadow-md px-6 sm:px-8 py-3 flex justify-between items-center sticky top-0 z-50">
+    <nav 
+      // Added dark:bg-gray-800 and dark:text-gray-100 for dark mode
+      className="w-full bg-[#1e1f26] text-white shadow-md px-6 sm:px-8 py-3 
+                 flex justify-between items-center sticky top-0 z-50
+                 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
+    >
       {/* Logo */}
       <NavLink to="/" className="flex items-center gap-2">
-       
         <span className="text-2xl sm:text-3xl font-bold">
-          <span className="text-white">Online</span>
+          {/* Changed 'text-white' to a more dynamic text color for dark mode */}
+          <span className="text-white dark:text-gray-100">Online</span> 
           <span className="text-sky-400 ml-1">Shop</span>
         </span>
       </NavLink>
@@ -57,9 +59,10 @@ export default function Navbar() {
             key={link.path}
             to={link.path}
             className={({ isActive }) =>
-              `hover:text-sky-400 transition-all ${
-                isActive ? "text-sky-400 border-b-2 border-sky-400 pb-1" : ""
-              }`
+              `hover:text-sky-400 transition-all 
+               ${isActive ? "text-sky-400 border-b-2 border-sky-400 pb-1" : ""}
+               // Added dark:text-gray-300 for non-active links in dark mode
+               ${isActive ? "" : "dark:text-gray-300 dark:hover:text-sky-300"}`
             }
           >
             {link.label}
@@ -86,10 +89,14 @@ export default function Navbar() {
         <button onClick={login} className="hover:text-sky-400 cursor-pointer">
           <User size={22} />
         </button>
+        
+        {/* Dark Mode Toggle - this component handles its own dark mode styling */}
+        {/* <DarkMode />  */}
+       
 
         {/* 📱 Mobile Menu Button */}
         <button
-          className="md:hidden text-white text-2xl ml-2"
+          className="md:hidden text-white dark:text-gray-100 text-2xl ml-2" // Added dark:text-gray-100
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "✖" : "☰"}
@@ -98,19 +105,23 @@ export default function Navbar() {
 
       {/* 📋 Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#1e1f26] text-center md:hidden shadow-lg">
+        <div 
+          // Added dark:bg-gray-800 for mobile menu in dark mode
+          className="absolute top-full left-0 w-full bg-[#1e1f26] text-center md:hidden shadow-lg
+                     dark:bg-gray-800 transition-colors duration-300"
+        >
           {links.map((link) => (
             <NavLink
               key={link.path}
               to={link.path}
               onClick={() => setIsOpen(false)}
-              className="block py-3 border-b border-gray-700 hover:text-sky-400 transition-colors"
+              // Added dark:text-gray-200 for mobile links
+              className="block py-3 border-b border-gray-700 hover:text-sky-400 
+                         transition-colors dark:border-gray-600 dark:text-gray-200 dark:hover:text-sky-300"
             >
               {link.label}
             </NavLink>
           ))}
-
-          
         </div>
       )}
     </nav>

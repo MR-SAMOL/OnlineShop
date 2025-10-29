@@ -42,10 +42,7 @@ export default function Login() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#120a17] via-[#1a0b20] to-[#000000] p-4 sm:p-6 font-sans relative overflow-hidden"
-      // Added a subtle pseudo-element for background texture or stars
-      // You might need to add this via global CSS or another div
     >
-      {/* Optional: Add a subtle background pattern or animation */}
       <div className="absolute inset-0 bg-stars bg-cover bg-center opacity-20 z-0"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-pink-900/10 z-10"></div>
 
@@ -56,7 +53,7 @@ export default function Login() {
         className="relative z-20 bg-white/5 backdrop-blur-2xl border border-white/10 text-white shadow-2xl rounded-3xl p-6 sm:p-10 w-full max-w-sm mx-auto transform hover:shadow-purple-500/30 transition-shadow duration-300"
       >
         <h2 className="text-4xl font-extrabold text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-2 tracking-wide">
-          KH SHOP
+          Online Shop
         </h2>
         <p className="text-xl text-center text-gray-200 mb-8 font-light">
           Welcome Back

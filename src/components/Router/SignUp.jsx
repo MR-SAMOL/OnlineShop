@@ -77,7 +77,7 @@ export default function SignUp() {
         className="relative z-20 bg-white/5 backdrop-blur-2xl border border-white/10 text-white shadow-2xl rounded-3xl p-6 sm:p-10 w-full max-w-sm mx-auto transform hover:shadow-purple-500/30 transition-shadow duration-300"
       >
         <h2 className="text-4xl font-extrabold text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-2 tracking-wide">
-          KH SHOP
+          Online shop
         </h2>
         <p className="text-xl text-center text-gray-200 mb-8 font-light">
           Create Your Account
