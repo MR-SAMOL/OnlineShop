@@ -197,60 +197,62 @@ export default function About() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#12141b] text-gray-300 py-12 mt-16 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {/* Logo/Brand */}
-          <div className="flex flex-col items-start">
-            <h3 className="text-3xl font-bold mb-4 text-white">
-              Online<span className="text-sky-400">Shop</span>
-            </h3>
-            <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
-              Step into the world of curated fashion – where your perfect fit awaits. Designed with passion and precision.
-            </p>
-          </div>
+      {/* Footer */}
+<footer className="relative bg-[#0b0e15] text-gray-300 py-16 mt-24 border-t border-gray-800 overflow-hidden">
+  {/* Decorative gradient blobs */}
+  <div className="absolute -top-10 left-1/3 w-72 h-72 bg-sky-500/10 rounded-full blur-3xl"></div>
+  <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl"></div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-2xl font-semibold text-white mb-4">Quick Links</h3>
-            <ul className="space-y-3 text-lg font-medium">
-              <li><button onClick={Men} className="hover:text-sky-400 transition-colors duration-200">Men</button></li>
-              <li><button onClick={WomenPage} className="hover:text-pink-400 transition-colors duration-200">Women</button></li>
-              <li><button onClick={Couple} className="hover:text-purple-400 transition-colors duration-200">Couple</button></li>
-              <li><button onClick={() => navigate('/about')} className="hover:text-red-400 transition-colors duration-200">About Us</button></li>
-            </ul>
-          </div>
+  <div className="relative z-10 max-w-7xl mx-auto px-6 grid gap-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+    {/* Brand Info */}
+    <div>
+      <h3 className="text-3xl font-bold mb-4 text-white tracking-tight">
+        Online<span className="text-sky-400">Shop</span>
+      </h3>
+      <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
+        Step into the world of curated fashion — your style, your identity. Designed with passion and precision.
+      </p>
+      {/* Social Icons */}
+      <div className="flex gap-4 mt-6">
+        <a href="#" className="p-2 rounded-full bg-[#1a1f2e] hover:bg-sky-500/20 transition-all duration-300">
+          <svg fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="#" className="p-2 rounded-full bg-[#1a1f2e] hover:bg-sky-500/20 transition-all duration-300">
+          <svg fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 8v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c1.7 1.1 3.9 1.8 6.1 1.8 6.7 0 10.3-5.6 10.3-10.3v-.4c.7-.5 1.3-1.1 1.8-1.8z"/></svg>
+        </a>
+        <a href="#" className="p-2 rounded-full bg-[#1a1f2e] hover:bg-sky-500/20 transition-all duration-300">
+          <svg fill="none" stroke="currentColor" className="w-5 h-5" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg>
+        </a>
+      </div>
+    </div>
 
-          {/* Customer Service */}
-          <div>
-            <h3 className="text-2xl font-semibold text-white mb-4">Customer Care</h3>
-            <ul className="space-y-3 text-lg font-medium">
-              <li><button onClick={() => navigate('/faq')} className="hover:text-sky-400 transition-colors duration-200">FAQ</button></li>
-              <li><button onClick={() => navigate('/shipping')} className="hover:text-sky-400 transition-colors duration-200">Shipping & Returns</button></li>
-              <li><button onClick={ContactUs} className="hover:text-sky-400 transition-colors duration-200">Contact Us</button></li>
-            </ul>
-          </div>
+    {/* Quick Links */}
+    <div>
+      <h3 className="text-xl font-semibold text-white mb-4">Quick Links</h3>
+      <ul className="space-y-3 text-base font-medium">
+        <li><button onClick={Men} className="hover:text-sky-400 transition-all duration-200">Men</button></li>
+        <li><button onClick={WomenPage} className="hover:text-pink-400 transition-all duration-200">Women</button></li>
+        <li><button onClick={Couple} className="hover:text-purple-400 transition-all duration-200">Couple</button></li>
+      </ul>
+    </div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-2xl font-semibold text-white mb-4">Connect With Us</h3>
-            <p className="text-base text-gray-400 space-y-2">
-              <span className="flex items-center gap-2">📍</span> Phnom Penh, Cambodia
-              <span className="flex items-center gap-2">📞</span> +855 123 456 789
-              <span className="flex items-center gap-2">✉️</span> info@onlineshop.com
-            </p>
-            {/* Social Media Icons (example) */}
-            <div className="flex gap-4 mt-4">
-              <a href="#" className="text-gray-400 hover:text-sky-400 transition-colors"><svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
-              <a href="#" className="text-gray-400 hover:text-sky-400 transition-colors"><svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c1.7 1.1 3.9 1.8 6.1 1.8 6.7 0 10.3-5.6 10.3-10.3v-.4c.7-.5 1.3-1.1 1.8-1.8z"></path></svg></a>
-              <a href="#" className="text-gray-400 hover:text-sky-400 transition-colors"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path></svg></a>
-            </div>
-          </div>
-        </div>
+    {/* Contact Info */}
+    <div>
+      <h3 className="text-xl font-semibold text-white mb-4">Contact Us</h3>
+      <ul className="space-y-3 text-gray-400 text-base">
+        <li className="flex items-center gap-2"><span>📍</span> Phnom Penh, Cambodia</li>
+        <li className="flex items-center gap-2"><span>📞</span> +855 123 456 789</li>
+        <li className="flex items-center gap-2"><span>✉️</span> info@onlineshop.com</li>
+      </ul>
+    </div>
+  </div>
 
-        <div className="text-center mt-12 border-t border-gray-700 pt-6 text-gray-500 text-sm">
-          © {new Date().getFullYear()} <span className="text-white font-semibold">Online Shop</span>. All rights reserved.
-        </div>
-      </footer>
+  {/* Bottom bar */}
+  <div className="mt-12 border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
+    © {new Date().getFullYear()} <span className="text-white font-semibold">Online Shop</span>. All rights reserved.
+  </div>
+</footer>
+
     </div>
   );
 }
